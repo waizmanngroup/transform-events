@@ -428,6 +428,32 @@ html{overflow-x:hidden}body{overflow-x:clip}
 .shell .faq-inline details{border-bottom:1px solid var(--line);padding:6px 0}.shell .faq-inline summary{cursor:pointer;font-weight:700;line-height:1.5;padding:17px 35px 17px 0;position:relative}.shell .faq-inline summary::marker{color:var(--accent)}.shell .faq-inline details[open] summary{color:var(--accent)}.shell .faq-inline details p{line-height:1.85;max-width:830px;font-size:14px;padding:0 20px 20px 0}.shell .faq-home .section-head{max-width:850px}.shell .faq-home .section-title{text-wrap:balance}
 
 .shell .founder-principles{display:grid;gap:9px;margin:28px 0 25px}.shell .founder-principles>div{border-top:1px solid var(--line);padding:12px 0;display:flex;justify-content:space-between;gap:18px}.shell .founder-principles strong{font-size:11px;letter-spacing:.05em;white-space:nowrap}.shell .founder-principles span{font-size:12px;color:var(--body);text-align:right;line-height:1.6}.shell .page-hero p{max-width:730px;line-height:1.8}.shell .deep-rows article p,.shell .location-benefit-grid p{line-height:1.8}.shell h1,.shell h2,.shell h3{hyphens:none!important;word-break:normal!important}@media(max-width:500px){.shell .founder-principles>div{flex-direction:column;gap:4px}.shell .founder-principles span{text-align:left}.shell .bottom-cta h2{font-size:clamp(28px,7.4vw,42px)}}
+
+/* QA guardrails: mobile widths, tap targets, and editorial linebreak stability */
+.shell{width:100%;max-width:100%;overflow-x:clip}
+.shell .section,.shell .page-main,.shell main,.shell .wrap{min-width:0}
+.shell img,.shell video{max-width:100%}
+.shell .selected-media-grid,.shell .focus-grid,.shell .booking-layout,.shell .about-grid,.shell .offering-grid{min-width:0}
+.shell .selected-media-grid >*,.shell .focus-grid >*,.shell .booking-layout >*,.shell .about-grid >*,.shell .offering-grid >*{min-width:0}
+.shell .section-title,.shell .bottom-cta h2,.shell .page-hero h1{hyphens:none!important;word-break:normal!important;overflow-wrap:normal!important;text-wrap:balance}
+.shell .nav-toggle,.shell .specials-trigger,.shell .calendar-heading button,.shell .calendar-days button{touch-action:manipulation}
+.shell .booking-card input,.shell .booking-card select{font-size:16px}
+@media(max-width:760px){
+ .shell .booking-layout{grid-template-columns:minmax(0,1fr)}
+ .shell .booking-card{width:100%;max-width:100%}
+ .shell .old-ref-logo{min-width:155px;width:155px}
+ .shell .page-hero h1,.shell .bottom-cta h2{font-size:clamp(29px,7.6vw,48px);line-height:1.12}
+}
+@media(max-width:420px){
+ .shell .calendar-days{gap:2px}
+ .shell .calendar-days button{height:37px;font-size:12px}
+ .shell .booking-card{padding:16px}
+ .shell .bottom-cta .wrap{max-width:100%}
+ .shell .bottom-cta h2{letter-spacing:-.025em}
+}
+@media(prefers-reduced-motion:reduce){
+ .shell *,.shell *::before,.shell *::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+}
 </style>
 </head>
 <body><svg aria-hidden="true" focusable="false" style="position:absolute;width:0;height:0;overflow:hidden"><filter id="portrait-crisp" color-interpolation-filters="sRGB"><feConvolveMatrix order="3" kernelMatrix="0 -0.16 0 -0.16 1.64 -0.16 0 -0.16 0" preserveAlpha="true"/></filter></svg><div id="app"></div><dialog id="media-video-dialog" class="media-video-dialog" aria-label="Video zur Eventlocation"><div class="media-video-top"><strong id="media-video-title">Schlossgut Moosschwaige</strong><button type="button" id="media-video-close">Schließen ✕</button></div><video id="media-video-player" controls playsinline preload="none" poster="assets/schlossgut-impressionen-poster.webp"><source src="" type="video/mp4">Ihr Browser unterstützt dieses Video nicht.</video><div class="media-video-bottom" id="media-video-note">Video aus dem bereitgestellten Material – Veröffentlichung vorbehaltlich der Nutzungsrechte.</div></dialog>
